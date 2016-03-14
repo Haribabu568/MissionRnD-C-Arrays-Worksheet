@@ -48,7 +48,7 @@ struct student ** topKStudents(struct student *students, int len, int K) {
 		ptr = (struct student **)malloc(len*sizeof(struct student));
 		for (i = 0; i < K; i++)
 		{
-			*ptr[i] = students[i];
+			ptr[i] = &students[i];
 		}
 		return ptr;
 	}
